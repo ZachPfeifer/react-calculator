@@ -17,7 +17,7 @@ class App extends Component {
   calculateOperations = () => {
     let result = this.state.operations.join('')
     if (result) {
-      result = math.eval(result)
+      result = math.evaluate(result)
       result = math.format(result, { precision: 14 })
       result = String(result)
       this.setState({
